@@ -25,7 +25,7 @@ for (let dir of cmdDir) {
   // Set each .js file in the dir as a command
   for (let file of commandFiles) {
     let command = require(`./commands/${dir}/${file}`);
-    client.commands.set(command.name, command);
+    client.commands.set(command.name.toLowerCase(), command);
   }
 }
 
