@@ -7,6 +7,6 @@ module.exports = {
   name: 'cat',
   description: 'Cat.',
   execute(message) {
-    message.channel.send(`Cat.`);
+    message.channel.send(`Kitters.`);
   },
 };
