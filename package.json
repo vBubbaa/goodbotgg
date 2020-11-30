@@ -1,0 +1,19 @@
+{
+  "name": "goodbotgg",
+  "version": "1.0.0",
+  "description": "A discord bot written in Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "node"
+  ],
+  "author": "Michael James",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
