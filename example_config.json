@@ -1,4 +1,5 @@
 {
   "prefix": "!",
-  "token": "Your Token Here"
+  "token": "Your Token Here",
+  "cat-token": "Your cat token from https://thecatapi.com/"
 }
