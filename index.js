@@ -12,15 +12,21 @@ client.once('ready', () => {
   console.log('Ready!');
 });
 
-// Get all command files
-const commandFiles = fs
-  .readdirSync('./commands')
-  .filter((file) => file.endsWith('.js'));
+// Command directory
+let cmdDir = fs.readdirSync('./commands');
 
-// Import each command file
-for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
-  client.commands.set(command.name, command);
+// Iterate each directory of the command directory
+for (let dir of cmdDir) {
+  // Get command files for the dir
+  let commandFiles = fs
+    .readdirSync(`./commands/${dir}`)
+    .filter((file) => file.endsWith('.js'));
+
+  // Set each .js file in the dir as a command
+  for (let file of commandFiles) {
+    let command = require(`./commands/${dir}/${file}`);
+    client.commands.set(command.name, command);
+  }
 }
 
 // Catch channels messages and execute command dynamically, accordingly
